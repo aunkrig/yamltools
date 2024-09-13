@@ -1,0 +1,32 @@
+<project
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd"
+>
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>yamltools-util</artifactId>
+	<name>yamltools-util</name>
+	<description>yamltools-util - A library for command-line-base YAML tools</description>
+
+	<parent>
+		<groupId>de.unkrig.yamltools</groupId>
+		<artifactId>yamltools-parent</artifactId>
+		<version>0.0.3-SNAPSHOT</version>
+	</parent>
+
+	<dependencies>
+		<dependency><groupId>org.snakeyaml    </groupId><artifactId>snakeyaml-engine</artifactId></dependency>
+		<dependency><groupId>de.unkrig.commons</groupId><artifactId>commons-file    </artifactId></dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin><groupId>org.apache.maven.plugins</groupId><artifactId>maven-assembly-plugin     </artifactId></plugin>
+			<plugin><groupId>org.apache.maven.plugins</groupId><artifactId>maven-source-plugin       </artifactId></plugin>
+			<plugin><groupId>org.sonatype.plugins    </groupId><artifactId>nexus-staging-maven-plugin</artifactId></plugin>
+			<plugin><groupId>org.apache.maven.plugins</groupId><artifactId>maven-gpg-plugin          </artifactId></plugin>
+			<plugin><groupId>org.apache.maven.plugins</groupId><artifactId>maven-javadoc-plugin      </artifactId></plugin>
+		</plugins>
+	</build>
+</project>
